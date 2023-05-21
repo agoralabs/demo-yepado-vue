@@ -15,4 +15,4 @@ phases:
       - echo build process finished, we should uplload to S3 now and invalidate cloudfront cache
       - cd dist
       - ls -la
-      - aws s3 sync . s3://yepado.agoralabs.org --delete
+      - aws s3 sync . s3://$ENV_APP_S3_BUCKET_NAME_FRONTEND --delete
