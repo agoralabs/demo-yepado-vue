@@ -16,3 +16,4 @@ phases:
       - cd dist
       - ls -la
       - aws s3 sync . s3://$ENV_APP_S3_BUCKET_NAME_FRONTEND --delete
+      - aws cloudfront create-invalidation --distribution-id $ENV_APP_FRONTEND_DISTRIBUTION_ID --paths "/*"
