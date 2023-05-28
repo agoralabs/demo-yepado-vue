@@ -15,5 +15,5 @@ phases:
       - echo build process finished, we should uplload to S3 now and invalidate cloudfront cache
       - cd dist
       - ls -la
-      - aws s3 sync . s3://$ENV_APP_S3_BUCKET_NAME_FRONTEND --delete
-      #- aws cloudfront create-invalidation --distribution-id $ENV_APP_FRONTEND_DISTRIBUTION_ID --paths "/*"
+      - aws s3 sync . s3://$TF_VAR_ENV_APP_S3_BUCKET_NAME_FRONTEND --delete
+      - aws cloudfront create-invalidation --distribution-id $TF_VAR_ENV_APP_FRONTEND_DISTRIBUTION_ID --paths "/*"
