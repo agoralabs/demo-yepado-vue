@@ -1,5 +1,5 @@
 # Choose the Image which has Node installed already
-FROM $TF_VAR_ENV_APP_AWS_ACCOUNT_ID.dkr.ecr.$TF_VAR_ENV_APP_AWS_REGION_ECR.amazonaws.com/$TF_VAR_ENV_APP_NODE_REPO_NAME:$TF_VAR_ENV_APP_NODE_REPO_TAG
+FROM $TF_VAR_ENV_APP_GL_AWS_ACCOUNT_ID.dkr.ecr.$TF_VAR_ENV_APP_GL_AWS_REGION_ECR.amazonaws.com/$TF_VAR_ENV_APP_GL_REPO_NODE_NAME:$TF_VAR_ENV_APP_GL_REPO_NODE_TAG
 
 # install simple http server for serving static content
 RUN npm install -g http-server
